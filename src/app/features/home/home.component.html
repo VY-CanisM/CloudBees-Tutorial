@@ -2,7 +2,7 @@
   <div class="banner" *appShowAuthed="false">
     <div class="container">
       <h1 class="logo-font">My Web App</h1>
-      <p>A place to share your <i>Angular</i> knowledge.</p>
+      <p>A place to share your <b><i>Angular</i></b> knowledge.</p>
     </div>
   </div>
 
@@ -17,7 +17,7 @@
                 [ngClass]="{ active: listConfig.type === 'feed' }"
                 (click)="setListTo('feed')"
               >
-                Your Feed
+                My Feed
               </a>
             </li>
             <li class="nav-item">
@@ -28,7 +28,7 @@
                 }"
                 (click)="setListTo('all')"
               >
-                Global Feed
+                The Global Feed
               </a>
             </li>
             <li class="nav-item" [hidden]="!listConfig.filters.tag">
@@ -44,7 +44,7 @@
 
       <div class="col-md-3" *rxLet="tags$; let tags">
         <div class="sidebar">
-          <p>Popular Tags</p>
+          <p>Popular Tags for me</p>
 
           <div class="tag-list">
             <a
@@ -59,7 +59,7 @@
           <div [hidden]="tagsLoaded">Loading tags...</div>
 
           <div [hidden]="!tagsLoaded || tags.length > 0">
-            No tags are here... yet.
+            No tags are here... yet..............................
           </div>
         </div>
       </div>
